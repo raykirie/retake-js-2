@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Выпадающее меню</title>
+    <style>
+        /* Стили для меню */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="dropdown" id="menu1">
+        <button onclick="toggleDropdown('submenu1')">Меню 1</button>
+        <div class="dropdown-content" id="submenu1">
+            <div class="dropdown" id="submenu1_1">
+                <button onclick="toggleDropdown('submenu1_1')">Меню 1.1</button>
+                <div class="dropdown-content" id="submenu1_1">
+                    <a href="#">Пункт 1.1.1</a>
+                    <a href="#">Пункт 1.1.2</a>
+                </div>
+            </div>
+            <a href="#">Пункт 1.2</a>
+        </div>
+    </div>
+
+    <div class="dropdown" id="menu2">
+        <button onclick="toggleDropdown('submenu2')">Меню 2</button>
+        <div class="dropdown-content" id="submenu2">
+            <a href="#">Пункт 2.1</a>
+            <a href="#">Пункт 2.2</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
